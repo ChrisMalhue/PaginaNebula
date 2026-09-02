@@ -1,0 +1,60 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
+
+.custom-navbar {
+  /* Lienas encargadas del degradado */
+  background: linear-gradient(to right, #000000 0%, #150036 40%, #1c004a 100%) !important;
+  width: 100%;
+}
+
+/* Forzar que las columnas de nebula ocupen todo el ancho */
+.custom-navbar .container.columns {
+  display: flex !important;
+  width: 100%;
+}
+
+/* Seccion del logo a continuacion */
+
+.df-logo-section {
+  flex-shrink: 0; /* El shrink hace que el logo no se achique */
+}
+
+.logo-text {
+  color: #ffffff !important;
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.andlogo{
+    width: 80px;
+    border-radius: 500px;
+}
+
+.df-menu-section {
+  display: flex !important;           
+  justify-content: center !important; 
+  align-items: center !important;     
+  flex-grow: 1; /* Esto hace que ocupe todo el espacio entre los links */
+  gap: 30px;    /* esto es para el espacio horizontal */
+}
+
+.nav-link {
+  color: #ffffff !important;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+  white-space: nowrap; /* esto evita que lo largo se separe en 2 lineas */
+}
+
+/* Body comienza aqui abajo*/
+
+/* Contenedor */
+.contenedor{
+    background-image: url(/images/video_aniversario.webp);
+    background-size: cover;
+    min-height: 800px;
+}
