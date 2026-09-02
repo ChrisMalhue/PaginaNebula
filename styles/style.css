@@ -4,21 +4,24 @@
   /* Lienas encargadas del degradado */
   background: linear-gradient(to right, #000000 0%, #150036 40%, #1c004a 100%) !important;
   width: 100%;
+  padding-right: 1.5rem;;
 }
 
 /* Forzar que las columnas de nebula ocupen todo el ancho */
 .custom-navbar .container.columns {
   display: flex !important;
   width: 100%;
+  max-width: 100% !important;   /* Esta linea salvo la pagina, estaba mal el header y con esto se centro bien*/
 }
 
 /* Seccion del logo a continuacion */
 
-.df-logo-section {
+.logo-seccion {
   flex-shrink: 0; /* El shrink hace que el logo no se achique */
+  margin-left: 40px;
 }
 
-.logo-text {
+.logo-texto {
   color: #ffffff !important;
   font-size: 1.3rem;
   font-weight: bold;
@@ -28,11 +31,11 @@
 }
 
 .andlogo{
-    width: 80px;
-    border-radius: 500px;
+  width: 80px;
+  border-radius: 500px;
 }
 
-.df-menu-section {
+.menu-seccion {
   display: flex !important;           
   justify-content: center !important; 
   align-items: center !important;     
@@ -52,9 +55,29 @@
 
 /* Body comienza aqui abajo*/
 
-/* Contenedor */
+/* Contenedor, video y texto*/
 .contenedor{
-    background-image: url(/images/video_aniversario.webp);
-    background-size: cover;
-    min-height: 800px;
+  display: flex;
+  align-items: flex-start;  
+  min-height: 800px;
+  gap: 40px;  /* Espacio video y texto */
+  padding-top: 60px;
 }
+
+.video-box{
+  background-image: url(/images/video_aniversario.webp);
+  background-size: cover;
+  background-position: center;
+  width: 60%;           
+  height: 700px;         
+  margin-left: 40px;    
+  border-radius: 90px;   
+}
+
+.texto-box{
+  flex: 1;
+  padding-right: 40px;
+  padding-top: 0; /* ajustá si querés un pequeño espacio */
+}
+
+
