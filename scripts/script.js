@@ -13,13 +13,13 @@ function inyectarHeader(){
             
             <!-- Sección 2: Enlaces (Centro) -->
             <section class="column is-flex is-justify-content-center p-0 menu-seccion">
-                <a class="nav-link is-active" href="#">Home</a>
-                <a class="nav-link" href="#quienes">Quienes somos</a>
-                <a class="nav-link" href="#elegirnos">Por que elegirnos</a>
-                <a class="nav-link" href="#oferta">Como trabajamos</a>
-                <a class="nav-link" href="#fotos">Galeria de eventos</a>
-                <a class="nav-link" href="#faq">FAQ</a>
-                <a class="nav-link" href="#cotizacion">Cotizacion</a>
+                <a class="nav-link is-active" href="../index.html">Home</a>
+                <a class="nav-link" href="../index.html#quienes">Quienes somos</a>
+                <a class="nav-link" href="../index.html#elegirnos">Por que elegirnos</a>
+                <a class="nav-link" href="../pages/eventos.html#trabajamos">Como trabajamos</a>
+                <a class="nav-link" href="../pages/eventos.html#fotos">Galeria de eventos</a>
+                <a class="nav-link" href="../pages/faqcotiza.html#faq">FAQ</a>
+                <a class="nav-link" href="../pages/faqcotiza.html#cotizacion">Cotizacion</a>
             </section>
 
         </div>
@@ -27,4 +27,13 @@ function inyectarHeader(){
 
 }
 
+function recibirDatos(event) {
+    event.preventDefault(); // Evita que la página se recargue y se pierda la información
+
+    // Muestra el cuadro nativo con tu mensaje personalizado
+    alert("Recibimos tu solicitud, te contactaremos en breve.");
+
+    // Deja todos los campos del formulario completamente vacíos
+    event.target.reset();
+}
 inyectarHeader();

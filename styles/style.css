@@ -7,6 +7,12 @@
   padding-right: 1.5rem;;
 }
 
+header{
+  position: sticky;
+  top: 0;
+  z-index: 100; /* Esto es para que el header siempre quede al frente y no se bugee la pag al scrollear hacia abajo */
+}
+
 /* Forzar que las columnas de nebula ocupen todo el ancho */
 .custom-navbar .container.columns {
   display: flex !important;
@@ -56,28 +62,142 @@
 /* Body comienza aqui abajo*/
 
 /* Contenedor, video y texto*/
+
+/* Contenedor: centrado vertical en vez de flex-start, se ve más equilibrado */
 .contenedor{
   display: flex;
-  align-items: flex-start;  
+  align-items: center;
   min-height: 800px;
-  gap: 40px;  /* Espacio video y texto */
+  gap: 40px;
   padding-top: 60px;
+  padding-bottom: 60px;
+  background: linear-gradient(to bottom, #000000 0%, #1c004a 35%, #1b0036 70%, #690046 100%) !important;
 }
 
+/* Vídeo */
 .video-box{
-  background-image: url(/images/video_aniversario.webp);
   background-size: cover;
   background-position: center;
-  width: 60%;           
+  width: 50%;           
   height: 700px;         
   margin-left: 40px;    
-  border-radius: 90px;   
+  border-radius: 90px;
 }
 
+/* Texto alineado a la izquierda, con ancho máximo para que no se disperse */
 .texto-box{
-  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 550px;
   padding-right: 40px;
-  padding-top: 0; /* ajustá si querés un pequeño espacio */
 }
 
+/* Título Nevula */
+.texto-box h1{
+  color: #ffffff;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 0 0 20px rgba(255, 0, 200, 0.45),
+               0 0 45px rgba(123, 47, 247, 0.3);
+}
 
+/* Línea decorativa bajo el título, le da un ancla visual */ /* <-- No sé si quieren sacar esto xd */
+.texto-box h1::after{
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  margin-top: 16px;
+  background: linear-gradient(to right, #ff2eb8, #7b2ff7);
+  border-radius: 2px;
+}
+
+/* Primer párrafo */
+.texto-box p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Segundo párrafo */
+.texto-box p:last-of-type {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+/* Entrada animada, le da vida al cargar */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.texto-box h1,
+.texto-box p {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.texto-box p:nth-of-type(1) { animation-delay: 0.15s; }
+.texto-box p:nth-of-type(2) { animation-delay: 0.3s; }
+
+
+/* CSS de faq_cotiza */
+
+.faq-item.box {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.faq-item.box:hover {
+    transform: translateY(-2px);
+    border-color: #4a00e0; /* Color de acento morado/azul para resaltar */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilo opcional para la respuesta */
+.faq-respuesta {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.seccion-divisor {
+    background-color: #e2e8f0; /* Un gris muy suave y limpio */
+    border: none;
+    height: 1px; /* Grosor ultra fino */
+    max-width: 400px; /* No ocupa toda la pantalla, solo el centro */
+    margin: 40px auto; /* Centra la linea y le da espacio arriba y abajo */
+    opacity: 0.7; /* Le da un toque difuminado sutil */
+}
+
+.cotizacion-form-mini {
+    border-radius: 12px !important;
+    padding: 24px !important;
+}
+
+/* Efecto de focus morado al hacer clic en los campos */
+.cotizacion-form-mini .input:focus,
+.cotizacion-form-mini .textarea:focus {
+    border-color: #4a00e0 !important;
+    box-shadow: 0 0 0 3px rgba(74, 0, 224, 0.12) !important;
+}
+
+/* Botón moderno y llamativo */
+.btn-cotizar-mini {
+    background: linear-gradient(135deg, #4a00e0, #6e00f5) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    transition: opacity 0.2s ease;
+}
+
+.btn-cotizar-mini:hover {
+    opacity: 0.9;
+}

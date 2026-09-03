@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ_Cotiza</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+</head>
+<body>
+    <header id ="header"></header>
+
+    <!-- Añadimos class="section" de bulma y un contenedor para que quede todo centrado -->
+    <section id="faq" class="section">
+        <div class="container is-max-desktop">
+            
+            <!-- Clase de título de Bulma con margen abajo (mb-6) -->
+            <h2 class="title is-3 has-text-centered mb-6">Preguntas Frecuentes</h2>
+
+            <!-- Pregunta 1 -->
+            <div class="faq-item box mb-4">
+                <h3 class="faq-pregunta title is-5 mb-2">¿Cuáles son los métodos de pago disponibles?</h3>
+                <p class="faq-respuesta has-text-grey">
+                    Aceptamos tarjetas de crédito y débito (Visa, Mastercard), transferencias bancarias directas y pagos a través de plataformas digitales autorizadas.
+                </p>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div class="faq-item box mb-4">
+                <h3 class="faq-pregunta title is-5 mb-2">¿Con cuánto tiempo de anticipación debo reservar?</h3>
+                <p class="faq-respuesta has-text-grey">
+                    Recomendamos realizar tu reserva con un mínimo de 15 días de anticipación para garantizar la disponibilidad técnica y del equipo en la fecha solicitada.
+                </p>
+            </div>
+
+            <!-- Pregunta 3  -->
+            <div class="faq-item box mb-4">
+                <h3 class="faq-pregunta title is-5 mb-2">¿Ofrecen garantía o devoluciones?</h3>
+                <p class="faq-respuesta has-text-grey">
+                    Sí, puedes cancelar o reprogramar tu fecha sin costos adicionales hasta 72 horas antes del inicio programado. Pasado ese plazo, se aplicará un recargo administrativo.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <hr class="seccion-divisor">  <!-- Esta cuestion es una linea divisora para que se vea mas bonito  -->
+
+    <section id="cotizacion" class="section">
+        <div class="container is-max-desktop" style="max-width: 500px;"> <!-- Esto lo hace angost para que se vea mas clean -->
+            
+            <h2 class="title is-4 has-text-centered mb-2">¿Quieres cotizar?</h2>
+            <p class="subtitle is-6 has-text-centered has-text-grey mb-5">Déjanos tus datos y te contactamos de inmediato.</p>
+
+            <form class="box cotizacion-form-mini" onsubmit="recibirDatos(event)">
+                
+                <!-- Campo 1: Nombre -->
+                <div class="field mb-4">
+                    <label class="label">Nombre</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Ingresa tu nombre" required>
+                    </div>
+                </div>
+
+                <!-- Campo 2: Telefono -->
+                <div class="field mb-4">
+                    <label class="label">Telefono</label>
+                    <div class="control">
+                        <input class="input" type="tel" placeholder="Numero de telefono" required>
+                    </div>
+                </div>
+
+                <!-- Campo 3: Fecha del evento -->
+                <div class="field mb-5">
+                    <label class="label">Fecha del evento</label>
+                    <div class="control">
+                        <input class="input" type="date" required>
+                    </div>
+                </div>
+
+                <!-- Campo 4: Detalles -->
+                <div class="field mb-5">
+                    <label class="label">¿Qué necesitas para tu evento?</label>
+                    <div class="control">
+                        <textarea class="textarea" rows="3" placeholder="Cantidad de personas, tipo de evento..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Botón -->
+                <button type="submit" class="button is-link is-fullwidth btn-cotizar-mini">
+                    Enviar solicitud
+                </button>
+
+            </form>
+
+        </div>
+    </section>
+</body>
+<script src="../scripts/script.js"></script>
+</html>
