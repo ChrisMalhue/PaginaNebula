@@ -102,19 +102,6 @@ header{
   letter-spacing: 4px;
   text-transform: uppercase;
   margin: 0;
-  text-shadow: 0 0 20px rgba(255, 0, 200, 0.45),
-               0 0 45px rgba(123, 47, 247, 0.3);
-}
-
-/* Línea decorativa bajo el título, le da un ancla visual */ /* <-- No sé si quieren sacar esto xd */
-.texto-box h1::after{
-  content: "";
-  display: block;
-  width: 80px;
-  height: 3px;
-  margin-top: 16px;
-  background: linear-gradient(to right, #ff2eb8, #7b2ff7);
-  border-radius: 2px;
 }
 
 /* Primer párrafo */
@@ -133,71 +120,8 @@ header{
 }
 
 /* Entrada animada, le da vida al cargar */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.texto-box h1,
-.texto-box p {
-  animation: fadeInUp 0.8s ease-out forwards;
-  opacity: 0;
-}
-
-.texto-box p:nth-of-type(1) { animation-delay: 0.15s; }
-.texto-box p:nth-of-type(2) { animation-delay: 0.3s; }
 
 
 /* CSS de faq_cotiza */
 
-.faq-item.box {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    border: 1px solid transparent;
-}
 
-.faq-item.box:hover {
-    transform: translateY(-2px);
-    border-color: #4a00e0; /* Color de acento morado/azul para resaltar */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
-}
-
-/* Estilo opcional para la respuesta */
-.faq-respuesta {
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-.seccion-divisor {
-    background-color: #e2e8f0; /* Un gris muy suave y limpio */
-    border: none;
-    height: 1px; /* Grosor ultra fino */
-    max-width: 400px; /* No ocupa toda la pantalla, solo el centro */
-    margin: 40px auto; /* Centra la linea y le da espacio arriba y abajo */
-    opacity: 0.7; /* Le da un toque difuminado sutil */
-}
-
-.cotizacion-form-mini {
-    border-radius: 12px !important;
-    padding: 24px !important;
-}
-
-/* Efecto de focus morado al hacer clic en los campos */
-.cotizacion-form-mini .input:focus,
-.cotizacion-form-mini .textarea:focus {
-    border-color: #4a00e0 !important;
-    box-shadow: 0 0 0 3px rgba(74, 0, 224, 0.12) !important;
-}
-
-/* Botón moderno y llamativo */
-.btn-cotizar-mini {
-    background: linear-gradient(135deg, #4a00e0, #6e00f5) !important;
-    border: none !important;
-    color: white !important;
-    font-weight: 600 !important;
-    border-radius: 8px !important;
-    transition: opacity 0.2s ease;
-}
-
-.btn-cotizar-mini:hover {
-    opacity: 0.9;
-}
