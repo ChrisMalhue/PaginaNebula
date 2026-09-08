@@ -119,6 +119,46 @@ header{
   font-size: 1.15rem;
 }
 
+/* Elegirnos */
+#elegirnos h2{
+  text-align: center;
+  margin-top: 20px;
+  color: #020202;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+#elegirnos-grid{
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 50px;
+  row-gap: 50px;
+  margin: 50px;
+}
+
+#elegirnos-grid img{
+  width: 130px;
+}
+
+#elegirnos-grid div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #3636364b;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+#elegirnos-grid div:hover{
+  color: white;
+  background-color: #240049ab;
+  transition: 0.3s;
+}
+
 /* CSS de footer */
 
 .footer{
