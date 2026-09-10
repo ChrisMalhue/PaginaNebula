@@ -1,6 +1,3 @@
-// Al inicio del archivo, antes de inyectarHeader()
-const base = window.location.pathname.includes("/pages/") ? "../" : "";
-
 // Header
 
 function inyectarHeader(){
@@ -12,8 +9,8 @@ function inyectarHeader(){
             <!-- Sección 1: Logotipo (Izquierda) -->
             <section class="column is-narrow p-0 logo-seccion">
                 <h1 class="logo-texto">
-                  <a href="${base}index.html">  
-                    <img class="andlogo" src="${base}images/logo.webp">
+                  <a href="/PaginaNebula/index.html">  
+                    <img class="andlogo" src="/PaginaNebula/images/logo.webp">
                   </a>
                 </h1>
             </section>
@@ -28,17 +25,17 @@ function inyectarHeader(){
             
             <!-- Sección 2: Enlaces (Centro) -->
             <section class="column is-flex is-justify-content-center p-0 menu-seccion">
-                <a class="nav-link is-active" href="${base}index.html">Home</a>
-                <a class="nav-link" href="${base}index.html#quienes">Quienes somos</a>
-                <a class="nav-link" href="${base}index.html#elegirnos">Por que elegirnos</a>
-                <a class="nav-link" href="${base}pages/eventos.html#trabajamos">Como trabajamos</a>
-                <a class="nav-link" href="${base}pages/eventos.html#fotos">Galeria de eventos</a>
-                <a class="nav-link" href="${base}pages/faqcotiza.html#faq">FAQ</a>
-                <a class="nav-link" href="${base}pages/faqcotiza.html#cotizacion">Cotizacion</a>
+                <a class="nav-link is-active" href="/PaginaNebula/index.html">Home</a>
+                <a class="nav-link" href="/PaginaNebula/index.html#quienes">Quienes somos</a>
+                <a class="nav-link" href="/PaginaNebula/index.html#elegirnos">Por que elegirnos</a>
+                <a class="nav-link" href="/PaginaNebula/pages/eventos.html#trabajamos">Como trabajamos</a>
+                <a class="nav-link" href="/PaginaNebula/pages/eventos.html#fotos">Galeria de eventos</a>
+                <a class="nav-link" href="/PaginaNebula/pages/faqcotiza.html#faq">FAQ</a>
+                <a class="nav-link" href="/PaginaNebula/pages/faqcotiza.html#cotizacion">Cotizacion</a>
             </section>
 
             <section class="sin_cuenta">
-              <a class="nav-link" href="${base}pages/inicio_secion.html">Iniciar sesion</a>
+              <a class="nav-link" href="/PaginaNebula/pages/inicio_secion.html">Iniciar sesion</a>
             </section>
 
             <section class="con_cuenta">
@@ -129,15 +126,15 @@ function inyectaFooter(){
     <footer class="footer has-background-black has-text-white">
     <div class="columns is-vcentered is-justify-content-space-between">
       <div class="column is-narrow">
-        <a href="${base}index.html">
-          <img class="andlogo" src="${base}images/logo.webp">
+        <a href="/PaginaNebula/index.html">
+          <img class="andlogo" src="/PaginaNebula/images/logo.webp">
         </a>
       </div>
       <div class="column is-narrow ml-6">
         <p class="title is-5">¿Necesitas ayuda?</p>
         <br>
-        <p class="subtitle is-6"><a class="has-text-current" href="${base}pages/eventos.html">Como trabajamos</a></p>
-        <p class="subtitle is-6"><a class="has-text-current" href="${base}pages/faqcotiza.html">Preguntas Frecuentes</a></p>
+        <p class="subtitle is-6"><a class="has-text-current" href="/PaginaNebula/pages/eventos.html">Como trabajamos</a></p>
+        <p class="subtitle is-6"><a class="has-text-current" href="/PaginaNebula/pages/faqcotiza.html">Preguntas Frecuentes</a></p>
       </div>
 
       <div class="column is-flex is-justify-content-flex-end">
