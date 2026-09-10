@@ -107,7 +107,7 @@ function recibirDatosLogin(event) {
 
     if (usuarioIngresado === usuarioValido && contrasenaIngresada === contrasenaValida) {
         localStorage.setItem("logueado", "true");
-        window.location.href = "../index.html";
+        window.location.href = "/PaginaNebula/index.html";
     } else {
         alert("Usuario o contraseña incorrecto");
     }
@@ -115,7 +115,7 @@ function recibirDatosLogin(event) {
 
 function cerrarSesion() {
     localStorage.removeItem("logueado");
-    window.location.href = "../index.html";
+    window.location.href = "/PaginaNebula/index.html";
 }
 
 // Footer
