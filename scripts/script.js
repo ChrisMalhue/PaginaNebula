@@ -1,5 +1,4 @@
 // Al inicio del archivo, antes de inyectarHeader()
-const enSubcarpeta = window.location.pathname.includes("/pages/");
 const base = enSubcarpeta ? "../" : "";
 
 // Header
@@ -29,17 +28,17 @@ function inyectarHeader(){
             
             <!-- Sección 2: Enlaces (Centro) -->
             <section class="column is-flex is-justify-content-center p-0 menu-seccion">
-                <a class="nav-link is-active" href="../index.html">Home</a>
-                <a class="nav-link" href="../index.html#quienes">Quienes somos</a>
-                <a class="nav-link" href="../index.html#elegirnos">Por que elegirnos</a>
-                <a class="nav-link" href="../pages/eventos.html#trabajamos">Como trabajamos</a>
-                <a class="nav-link" href="../pages/eventos.html#fotos">Galeria de eventos</a>
-                <a class="nav-link" href="../pages/faqcotiza.html#faq">FAQ</a>
-                <a class="nav-link" href="../pages/faqcotiza.html#cotizacion">Cotizacion</a>
+                <a class="nav-link is-active" href="${base}index.html">Home</a>
+                <a class="nav-link" href="${base}index.html#quienes">Quienes somos</a>
+                <a class="nav-link" href="${base}index.html#elegirnos">Por que elegirnos</a>
+                <a class="nav-link" href="${base}pages/eventos.html#trabajamos">Como trabajamos</a>
+                <a class="nav-link" href="${base}pages/eventos.html#fotos">Galeria de eventos</a>
+                <a class="nav-link" href="${base}pages/faqcotiza.html#faq">FAQ</a>
+                <a class="nav-link" href="${base}pages/faqcotiza.html#cotizacion">Cotizacion</a>
             </section>
 
             <section class="sin_cuenta">
-              <a class="nav-link" href="../pages/inicio_secion.html">Iniciar sesion</a>
+              <a class="nav-link" href="${base}pages/inicio_secion.html">Iniciar sesion</a>
             </section>
 
             <section class="con_cuenta">
