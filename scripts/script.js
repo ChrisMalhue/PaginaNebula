@@ -24,10 +24,34 @@ function inyectarHeader(){
                 <a class="nav-link" href="../pages/faqcotiza.html#cotizacion">Cotizacion</a>
             </section>
 
+            <section class="sin_cuenta">
+              <a class="nav-link" href="../pages/inicio_secion.html">Iniciar sesion</a>
+            </section>
+
+            <section class="con_cuenta">
+              <button onclick="cerrarSesion()">Cerrar sesion</button>
+            </section>
+
+            
         </div>
     </nav>`;
 
+    // Aqui vemos si hay alguna sesion creada para despues mosrtar el boton que toque
+    const estaLogueado = localStorage.getItem("logueado") === "true";
+    const sinCuenta = document.querySelector(".sin_cuenta");
+    const conCuenta = document.querySelector(".con_cuenta");
+
+    if (estaLogueado) {
+        sinCuenta.style.display = "none";
+        conCuenta.style.display = "flex";
+    } else {
+        sinCuenta.style.display = "flex";
+        conCuenta.style.display = "none";
+    }
+
 }
+
+// Funciones medias
 
 function recibirDatos(event) {
     event.preventDefault(); // Evita que la página se recargue y se pierda la información
@@ -37,6 +61,29 @@ function recibirDatos(event) {
 
     // Deja todos los campos del formulario completamente vacíos
     event.target.reset();
+}
+
+function recibirDatosLogin(event) {
+    event.preventDefault();
+
+    const usuarioValido = "admin";
+    const contrasenaValida = "1234";
+
+    const form = event.target;
+    const usuarioIngresado = document.getElementById("usuario").value;
+    const contrasenaIngresada = document.getElementById("contrasena").value;
+
+    if (usuarioIngresado === usuarioValido && contrasenaIngresada === contrasenaValida) {
+        localStorage.setItem("logueado", "true");
+        window.location.href = "../index.html";
+    } else {
+        alert("Usuario o contraseña incorrecto");
+    }
+}
+
+function cerrarSesion() {
+    localStorage.removeItem("logueado");
+    window.location.href = "../index.html";
 }
 
 // Footer
@@ -94,6 +141,8 @@ function inyectaFooter(){
     container.innerHTML = footerHTML;
   }
 }
+
+
 
 inyectaFooter();
 inyectarHeader();
