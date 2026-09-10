@@ -14,6 +14,14 @@ function inyectarHeader(){
                   </a>
                 </h1>
             </section>
+
+            <!-- Botón hamburguesa: solo visible en pantallas chicas -->
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Abrir menu">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Contenedor colapsable: enlaces + sesion -->
+            <div class="nav-collapse" id="nav-collapse">
             
             <!-- Sección 2: Enlaces (Centro) -->
             <section class="column is-flex is-justify-content-center p-0 menu-seccion">
@@ -51,6 +59,28 @@ function inyectarHeader(){
         conCuenta.style.display = "none";
     }
 
+    // Cierra el menu automaticamente al tocar cualquier link (mobile)
+    document.querySelectorAll("#nav-collapse .nav-link, #nav-collapse button").forEach(el => {
+        el.addEventListener("click", cerrarMenu);
+    });
+
+}
+
+// Menú hamburguesa
+function toggleMenu(){
+    const nav = document.getElementById("nav-collapse");
+    const icon = document.querySelector(".hamburger i");
+    nav.classList.toggle("is-active");
+    icon.classList.toggle("fa-bars");
+    icon.classList.toggle("fa-xmark");
+}
+
+function cerrarMenu(){
+    const nav = document.getElementById("nav-collapse");
+    const icon = document.querySelector(".hamburger i");
+    nav.classList.remove("is-active");
+    icon.classList.remove("fa-xmark");
+    icon.classList.add("fa-bars");
 }
 
 // Funciones medias

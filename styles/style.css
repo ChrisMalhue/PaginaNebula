@@ -59,10 +59,24 @@ header{
   white-space: nowrap; /* esto evita que lo largo se separe en 2 lineas */
 }
 
+/* Boton hamburguesa: oculto en desktop */
+.hamburger{
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+/* En desktop el contenedor colapsable no debe alterar el layout actual */
+.nav-collapse{
+  display: contents;
+}
+
 /* Body comienza aqui abajo*/
-
 /* Contenedor, video y texto*/
-
 /* Contenedor: centrado vertical en vez de flex-start, se ve más equilibrado */
 .contenedor{
   display: flex;
@@ -228,27 +242,128 @@ header{
 }
 
 /* Media queries */
+/* Header: menu hamburguesa a partir de 1020px*/
+@media screen and (max-width: 1100px) {
+  .hamburger{
+    display: block;
+  }
+
+  .custom-navbar .container.columns{
+    position: relative;
+  }
+
+  .nav-collapse{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, #150036 0%, #1c004a 100%);
+    padding: 20px 0;
+    gap: 20px;
+    z-index: 150;
+  }
+
+  .nav-collapse.is-active{
+    display: flex;
+  }
+
+  .menu-seccion{
+    flex-direction: column !important;
+    align-items: center;
+    gap: 18px !important;
+    width: 100%;
+  }
+
+  .sin_cuenta,
+  .con_cuenta{
+    justify-content: center !important;
+    width: 100%;
+  }
+}
+
+/* Tablet: la sección "quienes" reduce tamaños pero se mantiene en fila */
+@media screen and (max-width: 1024px) {
+  .video-box{
+    width: 45%;
+    height: 500px;
+    margin-left: 20px;
+    border-radius: 60px;
+  }
+
+  .texto-box{
+    max-width: 450px;
+    padding-right: 20px;
+  }
+}
+
 @media screen and (max-width: 768px) {
-.footer .columns {
+  .contenedor{
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  min-height: auto;
+  gap: 24px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  }
+
+  .video-box{
+    width: 90%;
+    height: 300px;
+    margin-left: 0;
+    border-radius: 40px;
+  }
+
+  .texto-box{
+    max-width: 90%;
+    padding-right: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+
+  .footer .columns {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+
+
+  .footer .column {
+    margin-left: 0 !important;
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
+
+
+
+  .footer .is-flex {
+    justify-content: center !important;
+  }
 }
 
-
-
-.footer .column {
-  margin-left: 0 !important;
-  margin-bottom: 1.5rem;
-  width: 100%;
+@media screen and (max-width:625px){
+  #elegirnos-grid{
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-
-
-.footer .is-flex {
-  justify-content: center !important;
+@media screen and (max-width:425px){
+  #elegirnos-grid{
+    grid-template-columns: 1fr;
+  }
 }
 
+@media screen and (max-width:565px){
+  #fotos{
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-
+@media screen and (max-width:395px){
+  #fotos{
+    grid-template-columns: 1fr;
+  }
+}
