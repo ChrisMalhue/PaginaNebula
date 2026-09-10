@@ -1,3 +1,7 @@
+// Al inicio del archivo, antes de inyectarHeader()
+const enSubcarpeta = window.location.pathname.includes("/pages/");
+const base = enSubcarpeta ? "../" : "";
+
 // Header
 
 function inyectarHeader(){
