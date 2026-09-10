@@ -194,19 +194,11 @@ header{
   width: 1500px;
 }
 
-#trabajamos{
+.trabajamos-respuesta{
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 50px;
-}
-
-.trabajamos-respuesta{
-  text-align: justify;
-}
-
-.trabajamos-respuesta2{
-  text-align: center;
 }
 
 /* CSS de footer */

@@ -191,21 +191,10 @@ header{
 }
 
 .trabajamos-item{
-  width: 1500px;
-}
-
-#trabajamos{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 50px;
+  width: 500px;
 }
 
 .trabajamos-respuesta{
-  text-align: justify;
-}
-
-.trabajamos-respuesta2{
   text-align: center;
 }
 
