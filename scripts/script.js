@@ -146,7 +146,60 @@ function inyectaFooter(){
   }
 }
 
+// Funcion de eventos
 
+function agregarEvento() {
+
+    const local = document.getElementById("local_evento").value;
+    const estado = document.getElementById("estado_evento").value;
+    const imagen = document.getElementById("imagen_evento").value;
+    const link = document.getElementById("link_evento").value;
+
+    // Validacion de campos vacios
+    if (!local || !imagen) {
+        alert("Por favor completa el local y la imagen del evento.");
+        return;
+    }
+
+    if (estado === "Programado" && !link) {
+        alert("Los eventos Programados necesitan un link para comprar entradas.");
+        return;
+    }
+
+    const contenedorFotos = document.getElementById("fotos");
+
+    // Parecido al trabajo de cartas, se crea el contenedor
+    const nuevoEvento = document.createElement("div");
+
+    // el boton de comrpa se muestra solo si el estado agregado es programado
+    const botonHTML = estado === "Programado"
+        ? `<a href="${link}" target="_blank"><button>Comprar ticket</button></a>`
+        : "";
+
+    nuevoEvento.innerHTML = `
+        <img src="${imagen}" alt="${local}">
+        <p>Local: ${local}</p>
+        <p>Estado: ${estado}</p>
+        ${botonHTML}
+    `;
+
+    contenedorFotos.prepend(nuevoEvento);
+
+    // Limpiamos el formulario
+    document.getElementById("local_evento").value = "";
+    document.getElementById("imagen_evento").value = "";
+    document.getElementById("link_evento").value = "";
+}
+
+function controlarVistaAdmin() {
+    const estaLogueado = localStorage.getItem("logueado") === "true";
+    const seccionAgregar = document.getElementById("agregar-evento");
+
+    if (seccionAgregar) {
+        seccionAgregar.style.display = estaLogueado ? "block" : "none";
+    }
+}
 
 inyectaFooter();
 inyectarHeader();
+controlarVistaAdmin();

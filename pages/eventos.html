@@ -53,6 +53,51 @@
             <p>Estado: Finalizado</p>
         </div>
     </section>
+
+        <section class="agregar box mt-4" id="agregar-evento">
+        <div class="contenedor-agregar">
+
+            <div class="campos-inputs">
+                <div class="field">
+                    <label class="label">Local del evento</label>
+                    <div class="control">
+                        <input class="input" type="text" id="local_evento" placeholder="Escribe aquí">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Estado</label>
+                    <div class="control">
+                        <div class="select">
+                            <select id="estado_evento">
+                                <option value="Programado">Programado</option>
+                                <option value="Finalizado">Finalizado</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Imagen del evento</label>
+                    <div class="control">
+                        <input class="input" type="text" id="imagen_evento" placeholder="Pega el link aquí">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Link para comprar entradas</label>
+                    <div class="control">
+                        <input class="input" type="text" id="link_evento" placeholder="Solo si está Programado">
+                    </div>
+                </div>
+            </div>
+
+            <div class="boton-contenedor">
+                <button type="button" class="button is-primary" onclick="agregarEvento()">Agregar Evento</button>
+            </div>
+
+        </div>
+    </section>
     <footer id="footer-container"></footer>
 </body>
 <script src="../scripts/script.js"></script>
