@@ -151,7 +151,7 @@ header{
   background-color: #3636364b;
   border-radius: 20px;
   padding: 20px;
-}
+} 
 
 /* Historial de Eventos */
 #fotos{
@@ -163,9 +163,30 @@ header{
   margin: 50px;
 }
 
-#elegirnos-grid div:hover{
+#fotos div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #3636364b;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+#fotos div:hover{
   color: white;
   background-color: #240049ab;
+  transition: 0.3s;
+}
+
+#fotos div button{
+  background-color: #300020;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#fotos div button:hover{
+  background-color: #5c003d;
   transition: 0.3s;
 }
 
