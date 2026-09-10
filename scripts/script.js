@@ -9,7 +9,9 @@ function inyectarHeader(){
             <!-- Sección 1: Logotipo (Izquierda) -->
             <section class="column is-narrow p-0 logo-seccion">
                 <h1 class="logo-texto">
+                  <a href="/index.html">  
                     <img class="andlogo" src="/images/logo.webp">
+                  </a>
                 </h1>
             </section>
             
@@ -94,13 +96,15 @@ function inyectaFooter(){
     <footer class="footer has-background-black has-text-white">
     <div class="columns is-vcentered is-justify-content-space-between">
       <div class="column is-narrow">
-        <img class="andlogo" src="/images/logo.webp">
+        <a href="/index.html">
+          <img class="andlogo" src="/images/logo.webp">
+        </a>
       </div>
       <div class="column is-narrow ml-6">
         <p class="title is-5">¿Necesitas ayuda?</p>
         <br>
-        <p class="subtitle is-6">Preguntas frecuentes</p>
-        <p class="subtitle is-6">Como trabajamos</p>
+        <p class="subtitle is-6"><a class="has-text-current" href="/pages/eventos.html">Como trabajamos</a></p>
+        <p class="subtitle is-6"><a class="has-text-current" href="/pages/faqcotiza.html">Preguntas Frecuentes</a></p>
       </div>
 
       <div class="column is-flex is-justify-content-flex-end">

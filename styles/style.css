@@ -153,6 +153,16 @@ header{
   padding: 20px;
 }
 
+/* Historial de Eventos */
+#fotos{
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 50px;
+  row-gap: 50px;
+  margin: 50px;
+}
+
 #elegirnos-grid div:hover{
   color: white;
   background-color: #240049ab;
@@ -160,7 +170,6 @@ header{
 }
 
 /* CSS de footer */
-
 .footer{
   padding: 40px 20px;
 }
@@ -178,6 +187,7 @@ header{
   gap: 16px;
 }
 
+/* Media queries */
 @media screen and (max-width: 768px) {
 .footer .columns {
   flex-direction: column;
